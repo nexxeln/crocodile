@@ -16,6 +16,7 @@ async fn main() -> anyhow::Result<()> {
 
     match app.command {
         Some(Command::Init(args)) => commands::init_exec(args).await,
+        Some(Command::Prime(args)) => commands::prime_exec(args).await,
         None => {
             App::parse_from(["croc", "--help"]);
             Ok(())

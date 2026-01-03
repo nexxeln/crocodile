@@ -38,6 +38,7 @@ pub enum ColorMode {
 #[derive(Debug, Subcommand)]
 pub enum Command {
     Init(InitArgs),
+    Prime(PrimeArgs),
 }
 
 #[derive(Debug, Args)]
@@ -45,3 +46,6 @@ pub struct InitArgs {
     #[clap(short, long)]
     pub path: Option<PathBuf>,
 }
+
+#[derive(Debug, Args)]
+pub struct PrimeArgs {}
