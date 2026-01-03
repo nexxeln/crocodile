@@ -231,7 +231,7 @@ impl ContextItem {
     }
 
     fn generate_id(prefix: &str) -> String {
-        format!("{}-{}", prefix, Utc::now().timestamp_millis())
+        format!("{}-{}", prefix, uuid::Uuid::new_v4().as_simple())
     }
 }
 
@@ -273,7 +273,7 @@ impl Event {
     }
 
     fn generate_id() -> String {
-        format!("evt-{}", Utc::now().timestamp_millis())
+        format!("evt-{}", uuid::Uuid::new_v4().as_simple())
     }
 }
 
@@ -303,6 +303,6 @@ impl Review {
     }
 
     fn generate_id() -> String {
-        format!("rev-{}", Utc::now().timestamp_millis())
+        format!("rev-{}", uuid::Uuid::new_v4().as_simple())
     }
 }
