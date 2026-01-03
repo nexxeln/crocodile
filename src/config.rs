@@ -1,5 +1,8 @@
 use std::path::PathBuf;
 
+/// Configuration for the crocodile CLI tool.
+///
+/// Manages paths and initialization state for a crocodile project.
 #[derive(Debug, Clone)]
 pub struct Config {
     pub croc_dir: PathBuf,

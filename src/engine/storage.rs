@@ -5,6 +5,9 @@ use std::fs::{File, OpenOptions};
 use std::io::{BufWriter, Write};
 use std::path::Path;
 
+/// JSONL file storage for crocodile state.
+///
+/// Handles appending records to JSONL files with proper serialization.
 pub struct Storage {
     config: Config,
 }

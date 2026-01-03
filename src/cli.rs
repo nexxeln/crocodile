@@ -1,6 +1,9 @@
 use clap::{Args, Parser, Subcommand};
 use std::path::PathBuf;
 
+/// Main CLI application for crocodile.
+///
+/// Parses command-line arguments and dispatches to subcommands.
 #[derive(Debug, Parser)]
 #[clap(
     name = "croc",

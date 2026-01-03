@@ -16,9 +16,7 @@ struct InitEvent {
 }
 
 pub async fn exec(args: InitArgs) -> Result<()> {
-    let project_root = args
-        .path
-        .unwrap_or_else(|| std::env::current_dir().expect("Failed to get current directory"));
+    let project_root = args.path.unwrap_or(std::env::current_dir()?);
 
     let config = Config::new(project_root.clone());
 
