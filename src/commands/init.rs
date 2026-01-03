@@ -48,7 +48,7 @@ pub async fn exec(args: InitArgs) -> Result<()> {
         r#type: "initialized",
         timestamp: Utc::now().to_rfc3339(),
     };
-    storage.append_jsonl(&config.events_file(), &init_event)?;
+    storage.append_jsonl_locked(&config.events_file(), &init_event)?;
 
     check_git_repo(&project_root);
 
